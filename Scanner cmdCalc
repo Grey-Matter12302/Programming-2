@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class cmdCalc{
+
+     public static void main(String args[]){
+     
+         Scanner calc = new Scanner(System.in);
+         
+         float fNumber = calc.nextFloat();
+         System.out.println("Input your first number: " + fNumber);
+         
+         char operator = calc.next().charAt(0);
+         System.out.println("Input the operator you would like to use: " + operator);
+         
+         float sNumber = calc.nextFloat();
+         System.out.println("Input your second number: " + sNumber);
+         
+         float result = '0';
+         
+         if (operator == '*') {
+            result = fNumber * sNumber;
+         }else if (operator == '+') {
+             result = fNumber + sNumber;
+         }else if (operator == '-') {
+             result = fNumber - sNumber;
+         }else if (operator == '/') {
+             result = fNumber / sNumber;
+         }else {
+             System.out.println("That operator was not valid.");
+         }
+         System.out.println(result);
+
+         }
+}
