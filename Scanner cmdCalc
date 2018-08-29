@@ -1,34 +1,57 @@
 import java.util.Scanner;
 
-public class cmdCalc{
+public class Main{
 
-     public static void main(String args[]){
-     
-         Scanner calc = new Scanner(System.in);
-         
-         float fNumber = calc.nextFloat();
-         System.out.println("Input your first number: " + fNumber);
-         
-         char operator = calc.next().charAt(0);
-         System.out.println("Input the operator you would like to use: " + operator);
-         
-         float sNumber = calc.nextFloat();
-         System.out.println("Input your second number: " + sNumber);
-         
-         float result = '0';
-         
-         if (operator == '*') {
-            result = fNumber * sNumber;
-         }else if (operator == '+') {
-             result = fNumber + sNumber;
-         }else if (operator == '-') {
-             result = fNumber - sNumber;
-         }else if (operator == '/') {
-             result = fNumber / sNumber;
-         }else {
-             System.out.println("That operator was not valid.");
-         }
-         System.out.println(result);
+	public static void main(String args[]){
+    	 
+    	 boolean again = true;
+    	 
+    	while (again == true) {
+    		 Scanner calc = new Scanner(System.in);
 
+    		 System.out.println("Input your first number: ");
+    		 float fNumber = calc.nextFloat();
+    		 System.out.println("First Number: " + fNumber);
+         
+    		 System.out.println("Input the operator you would like to use: ");
+    		 char operator = calc.next().charAt(0);
+    		 System.out.println("Operator: " + operator);
+         
+    		 System.out.println("Input your second number: ");
+    		 float sNumber = calc.nextFloat();
+    		 System.out.println("Input your second number: " + sNumber);
+         
+    		 float result = '0';
+         
+    		 if (operator == '*') {
+    			 result = fNumber * sNumber;
+    		 }else if (operator == '+') {
+    			 result = fNumber + sNumber;
+    		 }else if (operator == '-') {
+    			 result = fNumber - sNumber;
+    		 }else if (operator == '/') {
+    			 result = fNumber / sNumber;
+    		 }else {
+    			 System.out.println("That operator was not valid.");
+    		 }
+    		 
+    		 System.out.println("Result = " + result);
+    		 
+    		 System.out.println("Would you like to make another calculation? Y/N " );
+    		 char loop = calc.next().charAt(0);
+    		 
+    		 
+    		 
+    		 if (loop == 'Y' ) {
+    			  again = true;
+    		 }else if (loop == 'y'){
+    			  again = true;
+    		 } else {
+           again = false;
          }
-}
+    		 //System.out.println(again);
+    		 
+    		}
+         }
+     }
+
